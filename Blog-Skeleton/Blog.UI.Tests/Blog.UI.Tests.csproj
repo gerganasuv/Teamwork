@@ -113,6 +113,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BrowserHost.cs" />
+    <Compile Include="LastTestCases.cs" />
     <Compile Include="Models\AccessExcelData.cs" />
     <Compile Include="Models\LogIn.cs" />
     <Compile Include="Pages\BasePage.cs" />

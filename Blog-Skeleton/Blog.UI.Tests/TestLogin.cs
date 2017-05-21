@@ -24,25 +24,16 @@ namespace Blog.UI.Tests
         {
             this.driver = BrowserHost.Instance.Application.Browser;
             this.driver.Manage().Window.Maximize();
-
-
         }
 
         [TearDown]
         public void CleanUp()
         {
-
-
             if (TestContext.CurrentContext.Result.Outcome.Status == TestStatus.Failed)
             {
-
-
                 string filename = Path.Combine(AppDomain.CurrentDomain.BaseDirectory) + ConfigurationManager.AppSettings["Logs"] + TestContext.CurrentContext.Test.Name + ".jpg";
-
                 var screenshot = ((ITakesScreenshot)this.driver).GetScreenshot();
-
                 screenshot.SaveAsFile(filename, ScreenshotImageFormat.Jpeg);
-
             }
         }
 

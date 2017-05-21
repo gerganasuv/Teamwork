@@ -8,5 +8,11 @@ namespace Blog.UI.Tests.Pages.HomePage
         {
             Assert.AreEqual("SOFTUNI BLOG", page.blogLogo.Text);
         }
+
+        public static void AssertGuestUserLogIn(this HomePage page)
+        {
+            Assert.IsTrue(page.LogInButton.Displayed);
+            Assert.IsTrue(page.RegisterButton.Displayed);
+        }
     }
 }
